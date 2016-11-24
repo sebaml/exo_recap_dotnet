@@ -25,5 +25,10 @@ namespace ServicesLayer
         {
             return SupplierRequests.ReqUpdateSupplier(sd);
         }
+
+        public bool AddSupplier(SupplierDetail sd)
+        {
+            return SupplierRequests.ReqAddSupplier(sd);
+        }
     }
 }

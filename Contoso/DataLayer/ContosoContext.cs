@@ -1,11 +1,8 @@
+using System.Data.Entity;
+
 namespace DataLayer
 {
-    using System;
-    using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
-
-    public partial class ContosoContext : DbContext
+    public class ContosoContext : DbContext
     {
         public ContosoContext()
             : base("name=ContosoContext")
@@ -70,7 +67,5 @@ namespace DataLayer
                 .Property(e => e.UnitPrice)
                 .HasPrecision(18, 0);
         }
-
-
     }
 }

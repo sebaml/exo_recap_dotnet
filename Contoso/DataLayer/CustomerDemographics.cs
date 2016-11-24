@@ -1,12 +1,8 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace DataLayer
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
-    public partial class CustomerDemographics
+    public class CustomerDemographics
     {
         [Key]
         [StringLength(2147483647)]

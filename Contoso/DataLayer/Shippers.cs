@@ -1,12 +1,8 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace DataLayer
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
-    public partial class Shippers
+    public class Shippers
     {
         [Key]
         public long ShipperID { get; set; }

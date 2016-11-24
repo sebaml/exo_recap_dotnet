@@ -1,12 +1,9 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace DataLayer
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
-    public partial class Orders
+    public class Orders
     {
         [Key]
         public long OrderID { get; set; }

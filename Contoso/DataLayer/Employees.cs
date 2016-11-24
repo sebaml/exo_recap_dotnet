@@ -1,12 +1,9 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace DataLayer
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
-    public partial class Employees
+    public class Employees
     {
         [Key]
         public long EmployeeID { get; set; }

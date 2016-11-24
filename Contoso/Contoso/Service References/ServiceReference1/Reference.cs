@@ -111,10 +111,10 @@ namespace Contoso.ServiceReference1 {
     public interface ISupplierService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISupplierService/GetSupplierByName", ReplyAction="http://tempuri.org/ISupplierService/GetSupplierByNameResponse")]
-        Contoso.ServiceReference1.SupplierType[] GetSupplierByName(string name);
+        System.Collections.Generic.List<Contoso.ServiceReference1.SupplierType> GetSupplierByName(string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISupplierService/GetSupplierByName", ReplyAction="http://tempuri.org/ISupplierService/GetSupplierByNameResponse")]
-        System.Threading.Tasks.Task<Contoso.ServiceReference1.SupplierType[]> GetSupplierByNameAsync(string name);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<Contoso.ServiceReference1.SupplierType>> GetSupplierByNameAsync(string name);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -144,11 +144,11 @@ namespace Contoso.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public Contoso.ServiceReference1.SupplierType[] GetSupplierByName(string name) {
+        public System.Collections.Generic.List<Contoso.ServiceReference1.SupplierType> GetSupplierByName(string name) {
             return base.Channel.GetSupplierByName(name);
         }
         
-        public System.Threading.Tasks.Task<Contoso.ServiceReference1.SupplierType[]> GetSupplierByNameAsync(string name) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<Contoso.ServiceReference1.SupplierType>> GetSupplierByNameAsync(string name) {
             return base.Channel.GetSupplierByNameAsync(name);
         }
     }
