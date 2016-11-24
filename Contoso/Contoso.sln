@@ -14,6 +14,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesLayer", "ServicesLa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataRequest", "DataRequest\DataRequest.csproj", "{09D204CD-A6D7-435B-97DD-532E659BA989}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testWCF", "testWCF\testWCF.csproj", "{306EF7C4-7E04-4081-85D4-ECD589235424}"
+	ProjectSection(ProjectDependencies) = postProject
+		{28E2FA67-7D5D-464F-8B4F-27E0B824188D} = {28E2FA67-7D5D-464F-8B4F-27E0B824188D}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +41,10 @@ Global
 		{09D204CD-A6D7-435B-97DD-532E659BA989}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09D204CD-A6D7-435B-97DD-532E659BA989}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09D204CD-A6D7-435B-97DD-532E659BA989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{306EF7C4-7E04-4081-85D4-ECD589235424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{306EF7C4-7E04-4081-85D4-ECD589235424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{306EF7C4-7E04-4081-85D4-ECD589235424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{306EF7C4-7E04-4081-85D4-ECD589235424}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,13 +13,11 @@ namespace DataRequest
         {
             using (var context = new ContosoContext())
             {
-                var suppliers = context.Suppliers.Where(s => s.CompanyName == name).ToList();
-                List<SupplierType> toReturn =  suppliers.Select(s => new SupplierType
+                var suppliers = context.Suppliers.Where(s => s.CompanyName == name);
+                return suppliers.Select(s => new SupplierType
                 {
                     CompanyName = s.CompanyName, ContactName = s.ContactName, ContactTitle = s.ContactTitle, Country = s.Country
                 }).ToList();
-
-                return toReturn;
             }
         }
     }
