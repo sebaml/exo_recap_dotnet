@@ -10,6 +10,7 @@ namespace Contoso.Controllers
     {
         public ActionResult Index()
         {
+            Console.WriteLine("test");
             return View();
         }
 
