@@ -16,7 +16,14 @@ namespace ServicesLayer
         [OperationContract]
         List<SupplierType> GetSupplierByName(string name);
 
-        // TODO: Add your service operations here
+        [OperationContract]
+        SupplierDetail GetSupplierDetail(long id);
+
+        [OperationContract]
+        bool DelSupplier(long id);
+
+        [OperationContract]
+        bool UpdateSupplier(SupplierDetail sd);
     }
 
 }

@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace DataRequest
 {
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
     [DataContract]
-    public class SupplierType
+    public class SupplierDetail
     {
+        [DataMember]
+        public long SupplierId { get; set; }
+
         [DataMember]
         public string CompanyName { get; set; }
 
@@ -21,9 +23,24 @@ namespace DataRequest
         public string ContactTitle { get; set; }
 
         [DataMember]
+        public string Address { get; set; }
+
+        [DataMember]
+        public string City { get; set; }
+
+        [DataMember]
+        public string Region { get; set; }
+
+        [DataMember]
         public string Country { get; set; }
 
         [DataMember]
-        public long SupplierId { get; set; }
+        public string Tel { get; set; }
+
+        [DataMember]
+        public string Fax { get; set; }
+
+        [DataMember]
+        public string Website { get; set; }
     }
 }

@@ -15,5 +15,20 @@ namespace ServicesLayer
         {
             return SupplierRequests.ReqGetSupplierByName(name);
         }
+
+        public SupplierDetail GetSupplierDetail(long id)
+        {
+            return SupplierRequests.ReqGetSupplierDetail(id);
+        }
+
+        public bool DelSupplier(long id)
+        {
+            return SupplierRequests.ReqDelSupplier(id);
+        }
+
+        public bool UpdateSupplier(SupplierDetail sd)
+        {
+            return SupplierRequests.ReqUpdateSupplier(sd);
+        }
     }
 }
