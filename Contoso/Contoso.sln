@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testWCF", "testWCF\testWCF.
 		{28E2FA67-7D5D-464F-8B4F-27E0B824188D} = {28E2FA67-7D5D-464F-8B4F-27E0B824188D}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{66AA7CF4-1901-4297-8364-33083AD058DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{306EF7C4-7E04-4081-85D4-ECD589235424}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{306EF7C4-7E04-4081-85D4-ECD589235424}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{306EF7C4-7E04-4081-85D4-ECD589235424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66AA7CF4-1901-4297-8364-33083AD058DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66AA7CF4-1901-4297-8364-33083AD058DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66AA7CF4-1901-4297-8364-33083AD058DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66AA7CF4-1901-4297-8364-33083AD058DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

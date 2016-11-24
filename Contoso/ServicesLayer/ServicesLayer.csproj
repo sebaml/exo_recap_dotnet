@@ -138,6 +138,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{66AA7CF4-1901-4297-8364-33083AD058DA}</Project>
+      <Name>DataModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataRequest\DataRequest.csproj">
       <Project>{09d204cd-a6d7-435b-97dd-532e659ba989}</Project>
       <Name>DataRequest</Name>

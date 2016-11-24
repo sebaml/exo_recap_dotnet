@@ -69,9 +69,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SupplierDetail.cs" />
     <Compile Include="SupplierRequests.cs" />
-    <Compile Include="SupplierType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -81,6 +79,10 @@
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">
       <Project>{0f03e5a4-0e5a-4602-8d08-ad7fcb9738ce}</Project>
       <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{66AA7CF4-1901-4297-8364-33083AD058DA}</Project>
+      <Name>DataModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
