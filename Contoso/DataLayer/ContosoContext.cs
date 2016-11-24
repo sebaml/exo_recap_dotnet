@@ -5,10 +5,10 @@ namespace DataLayer
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class ContosoModel : DbContext
+    public partial class ContosoContext : DbContext
     {
-        public ContosoModel()
-            : base("name=ContosoModel")
+        public ContosoContext()
+            : base("name=ContosoContext")
         {
         }
 
@@ -70,5 +70,7 @@ namespace DataLayer
                 .Property(e => e.UnitPrice)
                 .HasPrecision(18, 0);
         }
+
+
     }
 }

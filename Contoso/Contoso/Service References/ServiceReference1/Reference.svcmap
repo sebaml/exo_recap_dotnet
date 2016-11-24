@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f6c516e4-72dd-4db9-9960-29790a1c3752" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58684/SupplierService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SupplierService.wsdl" MetadataType="Wsdl" ID="42a3c856-146a-4693-bfd0-6f9b23f8ddfe" SourceId="1" SourceUrl="http://localhost:58684/SupplierService.svc?wsdl" />
+    <MetadataFile FileName="SupplierService.xsd" MetadataType="Schema" ID="e4c40169-e967-4428-93a9-ca311258e249" SourceId="1" SourceUrl="http://localhost:58684/SupplierService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SupplierService1.xsd" MetadataType="Schema" ID="07d57a6b-fba5-4828-a017-b83dad79b8fc" SourceId="1" SourceUrl="http://localhost:58684/SupplierService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SupplierService2.xsd" MetadataType="Schema" ID="0a33d411-8811-4c32-bd47-14fc16d6fe1a" SourceId="1" SourceUrl="http://localhost:58684/SupplierService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SupplierService.disco" MetadataType="Disco" ID="f590ca70-4f73-4452-b544-932fb49cf15f" SourceId="1" SourceUrl="http://localhost:58684/SupplierService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
