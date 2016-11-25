@@ -179,6 +179,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ProductServiceRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -233,6 +238,16 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\ProductServiceRef\Contoso.ProductServiceRef.ProductDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ProductServiceRef\ProductService.disco" />
+    <None Include="Service References\ProductServiceRef\configuration91.svcinfo" />
+    <None Include="Service References\ProductServiceRef\configuration.svcinfo" />
+    <None Include="Service References\ProductServiceRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\ServiceReference1\Contoso.ServiceReference1.SupplierType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -246,6 +261,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CategoryServiceRef\CategoryService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductServiceRef\ProductService.wsdl" />
+    <None Include="Service References\ProductServiceRef\ProductService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductServiceRef\ProductService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductServiceRef\ProductService2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReference1\SupplierService.disco" />
@@ -295,6 +320,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\CategoryServiceRef\" />
+    <WCFMetadataStorage Include="Service References\ProductServiceRef\" />
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
   </ItemGroup>
   <PropertyGroup>
