@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Contoso.Models;
+using Contoso.ServiceReference1;
+using Contoso.ServiceReference2;
 
 namespace Contoso.Controllers
 {
@@ -50,18 +52,60 @@ namespace Contoso.Controllers
             }
         }
 
-       /* public ActionResult About()
+        /************************************ Adding Category ****************************************
+       **************************************************************************************************************/
+        public ActionResult AddCategory()
         {
-            ViewBag.Message = "Your application description page.";
+            var category = new CategoryDetailModel();
+            return View(category);
+        }
 
+
+        [HttpPost]
+        public ActionResult AddCategory(CategoryDetailModel category)
+        {
+            var categoryServiceClient = new ServiceReference2.CategoryServiceClient();
+            CategoryDetail newCategory= new CategoryDetail
+            {
+                CategoryName = category.CategoryName,
+                Description = category.Description,
+                Picture = category.Picture,
+            };
+            if (categoryServiceClient.AddCategory(newCategory))
+            {
+                return View();
+            }
+            else
+            {
+                return View();
+            }
+        }
+        /************************************ Editing Category ****************************************
+* ************************************************************************************************************/
+
+        public ActionResult Edit(long id)
+        {
+            Session["CategoryModified"] = id;
             return View();
         }
 
-        public ActionResult Contact()
+        [HttpPost]
+        public ActionResult Edit(CategoryDetailModel category)
         {
-            ViewBag.Message = "Your contact page.";
+            var categoryServiceClient = new ServiceReference2.CategoryServiceClient();
+            CategoryDetail newCategory = new CategoryDetail()
+            {
+                CategoryName = category.CategoryName,
+                Description = category.Description,
+                Picture = category.Picture,
 
-            return View();
-        }*/
+            };
+            newCategory.CategoryId = (long)Session["CategoryModified"];
+
+            categoryServiceClient.UpdateCategory(newCategory);
+            Session["CategoryModified"] = -1;
+            return RedirectToAction("Index");
+        }
+
     }
 }
