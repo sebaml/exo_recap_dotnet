@@ -17,7 +17,9 @@ namespace DataRequest
                     CompanyName = s.CompanyName,
                     ContactName = s.ContactName,
                     ContactTitle = s.ContactTitle,
-                    Country = s.Country
+                    Country = s.Country,
+                    SupplierId=s.SupplierID
+
                 }).ToList();
             }
         }

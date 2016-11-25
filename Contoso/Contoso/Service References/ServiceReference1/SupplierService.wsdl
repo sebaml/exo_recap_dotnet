@@ -31,6 +31,12 @@
   <wsdl:message name="ISupplierService_UpdateSupplier_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateSupplierResponse" />
   </wsdl:message>
+  <wsdl:message name="ISupplierService_AddSupplier_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSupplier" />
+  </wsdl:message>
+  <wsdl:message name="ISupplierService_AddSupplier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSupplierResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISupplierService">
     <wsdl:operation name="GetSupplierByName">
       <wsdl:input wsaw:Action="http://tempuri.org/ISupplierService/GetSupplierByName" message="tns:ISupplierService_GetSupplierByName_InputMessage" />
@@ -47,6 +53,10 @@
     <wsdl:operation name="UpdateSupplier">
       <wsdl:input wsaw:Action="http://tempuri.org/ISupplierService/UpdateSupplier" message="tns:ISupplierService_UpdateSupplier_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISupplierService/UpdateSupplierResponse" message="tns:ISupplierService_UpdateSupplier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSupplier">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISupplierService/AddSupplier" message="tns:ISupplierService_AddSupplier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISupplierService/AddSupplierResponse" message="tns:ISupplierService_AddSupplier_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISupplierService" type="tns:ISupplierService">
@@ -80,6 +90,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateSupplier">
       <soap:operation soapAction="http://tempuri.org/ISupplierService/UpdateSupplier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSupplier">
+      <soap:operation soapAction="http://tempuri.org/ISupplierService/AddSupplier" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

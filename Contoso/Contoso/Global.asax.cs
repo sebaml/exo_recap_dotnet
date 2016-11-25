@@ -18,6 +18,7 @@ namespace Contoso
         public void Session_OnStart()
         {
             Session["SupplierFound"] = 0;
+            Session["CategoryFound"] = 0;
         }
     }
 }

@@ -354,6 +354,12 @@ namespace Contoso.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISupplierService/UpdateSupplier", ReplyAction="http://tempuri.org/ISupplierService/UpdateSupplierResponse")]
         System.Threading.Tasks.Task<bool> UpdateSupplierAsync(Contoso.ServiceReference1.SupplierDetail sd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISupplierService/AddSupplier", ReplyAction="http://tempuri.org/ISupplierService/AddSupplierResponse")]
+        bool AddSupplier(Contoso.ServiceReference1.SupplierDetail sd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISupplierService/AddSupplier", ReplyAction="http://tempuri.org/ISupplierService/AddSupplierResponse")]
+        System.Threading.Tasks.Task<bool> AddSupplierAsync(Contoso.ServiceReference1.SupplierDetail sd);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -413,6 +419,14 @@ namespace Contoso.ServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> UpdateSupplierAsync(Contoso.ServiceReference1.SupplierDetail sd) {
             return base.Channel.UpdateSupplierAsync(sd);
+        }
+        
+        public bool AddSupplier(Contoso.ServiceReference1.SupplierDetail sd) {
+            return base.Channel.AddSupplier(sd);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddSupplierAsync(Contoso.ServiceReference1.SupplierDetail sd) {
+            return base.Channel.AddSupplierAsync(sd);
         }
     }
 }
