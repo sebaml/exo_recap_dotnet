@@ -25,6 +25,21 @@ namespace DataRequest
             }
         }
 
+        public static CategoryDetail ReqGetCategoryById(long id)
+        {
+            using (var context = new ContosoContext())
+            {
+                var cat = context.Categories.Single(c => c.CategoryID == id);
+                return new CategoryDetail()
+                {
+                    CategoryName = cat.CategoryName,
+                    Description = cat.Description,
+                    CategoryId = cat.CategoryID,
+                    Picture = cat.Picture
+                };
+            }
+        }
+
         public static List<CategoryDetail> ReqGetCategories()
         {
             using (var context = new ContosoContext())

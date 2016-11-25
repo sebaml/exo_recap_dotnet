@@ -14,6 +14,11 @@ namespace ServicesLayer
             return CategoryRequests.ReqGetCategoryByName(name);
         }
 
+        public CategoryDetail GetCategoryById(long id)
+        {
+            return CategoryRequests.ReqGetCategoryById(id);
+        }
+
         public List<CategoryDetail> GetCategories()
         {
             return CategoryRequests.ReqGetCategories();

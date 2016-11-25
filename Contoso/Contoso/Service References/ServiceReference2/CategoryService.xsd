@@ -15,6 +15,32 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetCategoryById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="GetCategoryByIdResult" nillable="true" type="q2:CategoryDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategories">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="GetCategoriesResult" nillable="true" type="q3:ArrayOfCategoryDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="DelCategory">
     <xs:complexType>
       <xs:sequence>
@@ -30,7 +56,7 @@
   <xs:element name="UpdateCategory">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="cd" nillable="true" type="q2:CategoryDetail" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="cd" nillable="true" type="q4:CategoryDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -44,7 +70,7 @@
   <xs:element name="AddCategory">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="cd" nillable="true" type="q3:CategoryDetail" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="cd" nillable="true" type="q5:CategoryDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

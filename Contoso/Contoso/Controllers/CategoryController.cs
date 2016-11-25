@@ -11,6 +11,7 @@ namespace Contoso.Controllers
 {
     public class CategoryController : Controller
     {
+
         public ActionResult Index()
         {
             return View();
@@ -107,5 +108,34 @@ namespace Contoso.Controllers
             return RedirectToAction("Index");
         }
 
+
+        /************************************ Details Category ****************************************
+* ************************************************************************************************************/
+        public ActionResult Details(long id)
+        {
+            var categoryServiceClient = new ServiceReference2.CategoryServiceClient();
+            var category = categoryServiceClient.GetCategoryById(id);
+
+            var categoryById = new CategoryDetailModel
+            {
+                CategoryName = category.CategoryName,
+                Description = category.Description,
+                Picture = category.Picture,
+                ExtensionData = category.ExtensionData
+            };
+
+            return View(categoryById);
+        }
+
+
+        /************************************ Delete Category ****************************************
+* ************************************************************************************************************/
+
+        public ActionResult Delete(long id)
+        {
+            var categoryServiceClient = new ServiceReference2.CategoryServiceClient();
+            categoryServiceClient.DelCategory(id);
+            return RedirectToAction("Index");
+        }
     }
 }

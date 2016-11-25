@@ -289,6 +289,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Content\mario.jpeg" />
     <Content Include="Views\index.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -346,6 +347,9 @@
     <Content Include="Views\Product\SearchProducts.cshtml" />
     <Content Include="Views\Product\Index - Copy.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Category\AddCategory.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\Category\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
