@@ -3,14 +3,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+    <h1 class="page-header">Search Supplier</h1>
+    <form method="post">
 
+        Supplier Name: @Html.TextBox("name")
+        <input id="SearchButton" type="submit" value="Search" />
+    </form>
 
-<form method="post">
-    
-    Supplier Name: @Html.TextBox("name")
-    <input id="SearchButton" type="submit" value="Search" />
-</form>
 
 @if ((int)Session["SupplierFound"]== 1)
 {
