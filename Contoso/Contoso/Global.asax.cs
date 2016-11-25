@@ -19,6 +19,7 @@ namespace Contoso
         {
             Session["SupplierFound"] = 0;
             Session["CategoryFound"] = 0;
+            Session["ProductFound"] = 0;
         }
     }
 }

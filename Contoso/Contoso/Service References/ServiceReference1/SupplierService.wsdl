@@ -13,6 +13,12 @@
   <wsdl:message name="ISupplierService_GetSupplierByName_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetSupplierByNameResponse" />
   </wsdl:message>
+  <wsdl:message name="ISupplierService_GetSuppliers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuppliers" />
+  </wsdl:message>
+  <wsdl:message name="ISupplierService_GetSuppliers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuppliersResponse" />
+  </wsdl:message>
   <wsdl:message name="ISupplierService_GetSupplierDetail_InputMessage">
     <wsdl:part name="parameters" element="tns:GetSupplierDetail" />
   </wsdl:message>
@@ -42,6 +48,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISupplierService/GetSupplierByName" message="tns:ISupplierService_GetSupplierByName_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISupplierService/GetSupplierByNameResponse" message="tns:ISupplierService_GetSupplierByName_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetSuppliers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISupplierService/GetSuppliers" message="tns:ISupplierService_GetSuppliers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISupplierService/GetSuppliersResponse" message="tns:ISupplierService_GetSuppliers_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetSupplierDetail">
       <wsdl:input wsaw:Action="http://tempuri.org/ISupplierService/GetSupplierDetail" message="tns:ISupplierService_GetSupplierDetail_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISupplierService/GetSupplierDetailResponse" message="tns:ISupplierService_GetSupplierDetail_OutputMessage" />
@@ -63,6 +73,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetSupplierByName">
       <soap:operation soapAction="http://tempuri.org/ISupplierService/GetSupplierByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSuppliers">
+      <soap:operation soapAction="http://tempuri.org/ISupplierService/GetSuppliers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
