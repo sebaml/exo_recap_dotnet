@@ -11,7 +11,7 @@ namespace DataRequest
         {
             using (var context = new ContosoContext())
             {
-                var suppliers = context.Suppliers.Where(s => s.CompanyName == name);
+                var suppliers = context.Suppliers.Where(s => s.CompanyName.Contains(name));
                 return suppliers.Select(s => new SupplierType
                 {
                     CompanyName = s.CompanyName,
@@ -19,6 +19,23 @@ namespace DataRequest
                     ContactTitle = s.ContactTitle,
                     Country = s.Country,
                     SupplierId=s.SupplierID
+
+                }).ToList();
+            }
+        }
+
+        public static List<SupplierType> ReqGetSuppliers()
+        {
+            using (var context = new ContosoContext())
+            {
+                var suppliers = context.Suppliers;
+                return suppliers.Select(s => new SupplierType
+                {
+                    CompanyName = s.CompanyName,
+                    ContactName = s.ContactName,
+                    ContactTitle = s.ContactTitle,
+                    Country = s.Country,
+                    SupplierId = s.SupplierID
 
                 }).ToList();
             }

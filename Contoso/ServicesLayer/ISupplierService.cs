@@ -12,6 +12,9 @@ namespace ServicesLayer
         List<SupplierType> GetSupplierByName(string name);
 
         [OperationContract]
+        List<SupplierType> GetSuppliers();
+
+        [OperationContract]
         SupplierDetail GetSupplierDetail(long id);
 
         [OperationContract]

@@ -14,7 +14,22 @@ namespace DataRequest
         {
             using (var context = new ContosoContext())
             {
-                var categories = context.Categories.Where(c => c.CategoryName == name);
+                var categories = context.Categories.Where(c => c.CategoryName.Contains(name));
+                return categories.Select(c => new CategoryDetail
+                {
+                    CategoryName = c.CategoryName,
+                    Description = c.Description,
+                    CategoryId = c.CategoryID,
+                    Picture = c.Picture
+                }).ToList();
+            }
+        }
+
+        public static List<CategoryDetail> ReqGetCategories()
+        {
+            using (var context = new ContosoContext())
+            {
+                var categories = context.Categories;
                 return categories.Select(c => new CategoryDetail
                 {
                     CategoryName = c.CategoryName,

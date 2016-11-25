@@ -12,6 +12,9 @@ namespace ServicesLayer
         List<CategoryDetail> GetCategoryByName(string name);
 
         [OperationContract]
+        List<CategoryDetail> GetCategories();
+
+        [OperationContract]
         void DelCategory(long id);
 
         [OperationContract]

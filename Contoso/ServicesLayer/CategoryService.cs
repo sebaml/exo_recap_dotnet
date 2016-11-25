@@ -14,6 +14,11 @@ namespace ServicesLayer
             return CategoryRequests.ReqGetCategoryByName(name);
         }
 
+        public List<CategoryDetail> GetCategories()
+        {
+            return CategoryRequests.ReqGetCategories();
+        }
+
         public void DelCategory(long id)
         {
             CategoryRequests.ReqDelCategory(id);

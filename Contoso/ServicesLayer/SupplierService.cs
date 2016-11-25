@@ -11,6 +11,11 @@ namespace ServicesLayer
             return SupplierRequests.ReqGetSupplierByName(name);
         }
 
+        public List<SupplierType> GetSuppliers()
+        {
+            return SupplierRequests.ReqGetSuppliers();
+        }
+
         public SupplierDetail GetSupplierDetail(long id)
         {
             return SupplierRequests.ReqGetSupplierDetail(id);

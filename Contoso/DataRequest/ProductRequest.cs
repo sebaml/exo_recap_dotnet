@@ -17,7 +17,7 @@ namespace DataRequest
             {
                 var products = context.Products.ToList();
                 if (name != null)
-                    products = products.Where(p => p.ProductName == name).ToList();
+                    products = products.Where(p => p.ProductName.Contains(name)).ToList();
                 if (supplierId != null)
                     products = products.Where(p => p.SupplierID == supplierId).ToList();
                 if (categoryId != null)
