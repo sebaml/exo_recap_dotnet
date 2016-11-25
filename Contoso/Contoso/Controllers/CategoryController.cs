@@ -20,7 +20,7 @@ namespace Contoso.Controllers
         public ActionResult Index(String name)
         {
             var categoryName = name;
-            var categoryServiceClient = new CategoryServices.CategoryServiceClient();
+            var categoryServiceClient = new ServiceReference2.CategoryServiceClient();
 
             List<CategoryDetailModel> response = new List<CategoryDetailModel>();
 
