@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DataLayer;
 using DataModel;
 
@@ -17,7 +14,10 @@ namespace DataRequest
                 var suppliers = context.Suppliers.Where(s => s.CompanyName == name);
                 return suppliers.Select(s => new SupplierType
                 {
-                    CompanyName = s.CompanyName, ContactName = s.ContactName, ContactTitle = s.ContactTitle, Country = s.Country
+                    CompanyName = s.CompanyName,
+                    ContactName = s.ContactName,
+                    ContactTitle = s.ContactTitle,
+                    Country = s.Country
                 }).ToList();
             }
         }
@@ -27,7 +27,7 @@ namespace DataRequest
             using (var context = new ContosoContext())
             {
                 var supplier = context.Suppliers.Single(s => s.SupplierID == id);
-                return new SupplierDetail()
+                return new SupplierDetail
                 {
                     CompanyName = supplier.CompanyName,
                     ContactName = supplier.ContactName,
@@ -69,6 +69,30 @@ namespace DataRequest
                 supplier.ContactTitle = sd.ContactName;
                 supplier.HomePage = sd.Website;
                 supplier.ContactName = sd.ContactName;
+                context.SaveChanges();
+                return true;
+            }
+        }
+
+        public static bool ReqAddSupplier(SupplierDetail sd)
+        {
+            using (var context = new ContosoContext())
+            {
+                var supplier = new Suppliers
+                {
+                    SupplierID = sd.SupplierId,
+                    ContactName = sd.ContactName,
+                    Fax = sd.Fax,
+                    City = sd.City,
+                    Region = sd.Region,
+                    Phone = sd.Tel,
+                    Address = sd.Address,
+                    ContactTitle = sd.ContactTitle,
+                    CompanyName = sd.CompanyName,
+                    Country = sd.Country,
+                    HomePage = sd.Website
+                };
+                context.Suppliers.Add(supplier);
                 context.SaveChanges();
                 return true;
             }

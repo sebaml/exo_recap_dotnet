@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
 using DataModel;
-using DataRequest;
 
 namespace ServicesLayer
 {
@@ -25,6 +19,8 @@ namespace ServicesLayer
 
         [OperationContract]
         bool UpdateSupplier(SupplierDetail sd);
-    }
 
+        [OperationContract]
+        bool AddSupplier(SupplierDetail sd);
+    }
 }
