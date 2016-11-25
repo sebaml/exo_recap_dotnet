@@ -13,6 +13,12 @@
   <wsdl:message name="ICategoryService_GetCategoryByName_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCategoryByNameResponse" />
   </wsdl:message>
+  <wsdl:message name="ICategoryService_GetCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategories" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoriesResponse" />
+  </wsdl:message>
   <wsdl:message name="ICategoryService_DelCategory_InputMessage">
     <wsdl:part name="parameters" element="tns:DelCategory" />
   </wsdl:message>
@@ -36,6 +42,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ICategoryService/GetCategoryByName" message="tns:ICategoryService_GetCategoryByName_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICategoryService/GetCategoryByNameResponse" message="tns:ICategoryService_GetCategoryByName_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoryService/GetCategories" message="tns:ICategoryService_GetCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoryService/GetCategoriesResponse" message="tns:ICategoryService_GetCategories_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="DelCategory">
       <wsdl:input wsaw:Action="http://tempuri.org/ICategoryService/DelCategory" message="tns:ICategoryService_DelCategory_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICategoryService/DelCategoryResponse" message="tns:ICategoryService_DelCategory_OutputMessage" />
@@ -53,6 +63,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetCategoryByName">
       <soap:operation soapAction="http://tempuri.org/ICategoryService/GetCategoryByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap:operation soapAction="http://tempuri.org/ICategoryService/GetCategories" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

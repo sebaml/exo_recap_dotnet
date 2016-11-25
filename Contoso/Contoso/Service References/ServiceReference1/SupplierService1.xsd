@@ -15,6 +15,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetSuppliers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuppliersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="GetSuppliersResult" nillable="true" type="q2:ArrayOfSupplierType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetSupplierDetail">
     <xs:complexType>
       <xs:sequence>
@@ -25,7 +37,7 @@
   <xs:element name="GetSupplierDetailResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="GetSupplierDetailResult" nillable="true" type="q2:SupplierDetail" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="GetSupplierDetailResult" nillable="true" type="q3:SupplierDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -46,7 +58,7 @@
   <xs:element name="UpdateSupplier">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="sd" nillable="true" type="q3:SupplierDetail" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="sd" nillable="true" type="q4:SupplierDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -60,7 +72,7 @@
   <xs:element name="AddSupplier">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="sd" nillable="true" type="q4:SupplierDetail" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="sd" nillable="true" type="q5:SupplierDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

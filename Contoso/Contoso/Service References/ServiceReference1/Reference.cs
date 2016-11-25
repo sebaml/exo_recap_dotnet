@@ -337,6 +337,12 @@ namespace Contoso.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISupplierService/GetSupplierByName", ReplyAction="http://tempuri.org/ISupplierService/GetSupplierByNameResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<Contoso.ServiceReference1.SupplierType>> GetSupplierByNameAsync(string name);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISupplierService/GetSuppliers", ReplyAction="http://tempuri.org/ISupplierService/GetSuppliersResponse")]
+        System.Collections.Generic.List<Contoso.ServiceReference1.SupplierType> GetSuppliers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISupplierService/GetSuppliers", ReplyAction="http://tempuri.org/ISupplierService/GetSuppliersResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<Contoso.ServiceReference1.SupplierType>> GetSuppliersAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISupplierService/GetSupplierDetail", ReplyAction="http://tempuri.org/ISupplierService/GetSupplierDetailResponse")]
         Contoso.ServiceReference1.SupplierDetail GetSupplierDetail(long id);
         
@@ -395,6 +401,14 @@ namespace Contoso.ServiceReference1 {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<Contoso.ServiceReference1.SupplierType>> GetSupplierByNameAsync(string name) {
             return base.Channel.GetSupplierByNameAsync(name);
+        }
+        
+        public System.Collections.Generic.List<Contoso.ServiceReference1.SupplierType> GetSuppliers() {
+            return base.Channel.GetSuppliers();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<Contoso.ServiceReference1.SupplierType>> GetSuppliersAsync() {
+            return base.Channel.GetSuppliersAsync();
         }
         
         public Contoso.ServiceReference1.SupplierDetail GetSupplierDetail(long id) {

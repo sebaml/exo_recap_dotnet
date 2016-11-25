@@ -116,6 +116,12 @@ namespace Contoso.ServiceReference2 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICategoryService/GetCategoryByName", ReplyAction="http://tempuri.org/ICategoryService/GetCategoryByNameResponse")]
         System.Threading.Tasks.Task<Contoso.ServiceReference2.CategoryDetail[]> GetCategoryByNameAsync(string name);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICategoryService/GetCategories", ReplyAction="http://tempuri.org/ICategoryService/GetCategoriesResponse")]
+        Contoso.ServiceReference2.CategoryDetail[] GetCategories();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICategoryService/GetCategories", ReplyAction="http://tempuri.org/ICategoryService/GetCategoriesResponse")]
+        System.Threading.Tasks.Task<Contoso.ServiceReference2.CategoryDetail[]> GetCategoriesAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICategoryService/DelCategory", ReplyAction="http://tempuri.org/ICategoryService/DelCategoryResponse")]
         void DelCategory(long id);
         
@@ -168,6 +174,14 @@ namespace Contoso.ServiceReference2 {
         
         public System.Threading.Tasks.Task<Contoso.ServiceReference2.CategoryDetail[]> GetCategoryByNameAsync(string name) {
             return base.Channel.GetCategoryByNameAsync(name);
+        }
+        
+        public Contoso.ServiceReference2.CategoryDetail[] GetCategories() {
+            return base.Channel.GetCategories();
+        }
+        
+        public System.Threading.Tasks.Task<Contoso.ServiceReference2.CategoryDetail[]> GetCategoriesAsync() {
+            return base.Channel.GetCategoriesAsync();
         }
         
         public void DelCategory(long id) {

@@ -15,6 +15,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetCategories">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="GetCategoriesResult" nillable="true" type="q2:ArrayOfCategoryDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="DelCategory">
     <xs:complexType>
       <xs:sequence>
@@ -30,7 +42,7 @@
   <xs:element name="UpdateCategory">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="cd" nillable="true" type="q2:CategoryDetail" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="cd" nillable="true" type="q3:CategoryDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -44,7 +56,7 @@
   <xs:element name="AddCategory">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="cd" nillable="true" type="q3:CategoryDetail" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DataModel" minOccurs="0" name="cd" nillable="true" type="q4:CategoryDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
