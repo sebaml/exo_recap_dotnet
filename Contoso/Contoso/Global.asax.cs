@@ -17,5 +17,10 @@ namespace Contoso
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        public void Session_OnStart()
+        {
+            Session["SupplierFound"] = 0;
+        }
     }
 }

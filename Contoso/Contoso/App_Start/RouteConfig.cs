@@ -13,11 +13,20 @@ namespace Contoso
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
+            /*routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );*/
+
+
+            //Route to Home
+            routes.MapRoute(
+                name: "HomeRoute",
+                url: "{controller}/{action}",
+                defaults: new { controller = "Home", action = "Index"}
             );
+
         }
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DataRequest" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DataModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:complexType name="ArrayOfSupplierType">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="SupplierType" nillable="true" type="tns:SupplierType" />
@@ -12,7 +12,24 @@
       <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ContactTitle" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierId" type="xs:long" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="SupplierType" nillable="true" type="tns:SupplierType" />
+  <xs:complexType name="SupplierDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierId" type="xs:long" />
+      <xs:element minOccurs="0" name="Tel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Website" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SupplierDetail" nillable="true" type="tns:SupplierDetail" />
 </xs:schema>
