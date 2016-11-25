@@ -63,7 +63,30 @@ namespace Contoso.Controllers
         public ActionResult AddSupplier(SupplierTypeModel supplier)
         {
             var supplierServiceClient = new ServiceReference1.SupplierServiceClient();
-            return View();
+            SupplierDetail newSupplier = new SupplierDetail
+            {
+                CompanyName = supplier.CompanyName,
+                ContactName = supplier.ContactName,
+                ContactTitle = supplier.ContactTitle,
+                Country = supplier.Country,
+                Address = supplier.Address,
+                City = supplier.City,
+                Fax = supplier.Fax,
+                Region = supplier.Region,
+                Tel = supplier.Tel,
+                Website = supplier.Website,
+                
+            };
+            if (supplierServiceClient.AddSupplier(newSupplier))
+            {
+                Console.WriteLine("supplier a été ajouté");
+                return View();
+
+            }
+            else
+            {
+                return View();
+            }
         }
 
        
