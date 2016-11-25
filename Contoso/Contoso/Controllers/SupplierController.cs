@@ -10,6 +10,10 @@ namespace Contoso.Controllers
 {
     public class SupplierController : Controller
     {
+
+        /************************************ Searching Supplier ****************************************
+ * ************************************************************************************************************/
+
         public ActionResult Index()
         {
             return View();
@@ -52,6 +56,9 @@ namespace Contoso.Controllers
             }
         }
 
+
+        /************************************ Adding Supplier ****************************************
+         **************************************************************************************************************/
         public ActionResult AddSupplier()
         {
             var supplier=new SupplierTypeModel();
@@ -89,7 +96,77 @@ namespace Contoso.Controllers
             }
         }
 
-       
+        /************************************ Editing Supplier ****************************************
+* ************************************************************************************************************/
+
+        public ActionResult Edit(long id)
+        {
+            Session["SupplierIdModified"] = id;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Edit(SupplierTypeModel supplier)
+        {
+            var supplierServiceClient = new ServiceReference1.SupplierServiceClient();
+            SupplierDetail newSupplier = new SupplierDetail
+            {
+                CompanyName = supplier.CompanyName,
+                ContactName = supplier.ContactName,
+                ContactTitle = supplier.ContactTitle,
+                Country = supplier.Country,
+                Address = supplier.Address,
+                City = supplier.City,
+                Fax = supplier.Fax,
+                Region = supplier.Region,
+                Tel = supplier.Tel,
+                Website = supplier.Website,
+
+            };
+            newSupplier.SupplierId = (long) Session["SupplierIdModified"];
+ 
+            supplierServiceClient.UpdateSupplier(newSupplier);
+            Session["SupplierIdModified"] = -1;
+            return RedirectToAction("Index");
+        }
+        /************************************ Show Supplier Details ****************************************
+* ************************************************************************************************************/
+
+
+        public ActionResult Details(long id)
+        {
+            var supplierServiceClient = new ServiceReference1.SupplierServiceClient();
+            var supplier=supplierServiceClient.GetSupplierDetail(id);
+
+            SupplierTypeModel SupplierById = new SupplierTypeModel
+            {
+                CompanyName = supplier.CompanyName,
+                ContactName = supplier.ContactName,
+                ContactTitle = supplier.ContactTitle,
+                Country = supplier.Country,
+                Address = supplier.Address,
+                City = supplier.City,
+                Fax = supplier.Fax,
+                Region = supplier.Region,
+                Tel = supplier.Tel,
+                Website = supplier.Website,
+
+            };
+            SupplierById.SupplierId = id;
+
+            return View(SupplierById);
+        }
+
+        /************************************ Delete Supplier ****************************************
+* ************************************************************************************************************/
+
+        public ActionResult Delete(long id)
+        {
+            var supplierServiceClient = new ServiceReference1.SupplierServiceClient();
+            supplierServiceClient.DelSupplier(id);
+            return RedirectToAction("Index");
+        }
+
 
 
     }
